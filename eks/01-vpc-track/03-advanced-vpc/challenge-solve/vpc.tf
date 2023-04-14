@@ -17,7 +17,18 @@ module "vpc" {
   one_nat_gateway_per_az = false
 
 
-  enable_vpn_gateway = false
+  enable_flow_log                      = true
+  create_flow_log_cloudwatch_log_group = true
+  create_flow_log_cloudwatch_iam_role  = true
+  flow_log_max_aggregation_interval    = 60
+
+  vpc_flow_log_tags = {
+    Name = "vpc-${local.env_name}"
+  }
+
+  vpc_tags = {
+    Name = "${local.env_name}"
+  }
 
   tags = {
     Terraform   = "true"
