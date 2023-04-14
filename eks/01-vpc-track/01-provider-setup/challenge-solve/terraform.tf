@@ -13,7 +13,9 @@ provider "aws" {
   region = var.region
 
   default_tags {
-    Terraform   = "true"
-    Environment = var.environment
+    tags = {
+      Terraform   = "true"
+      Environment = var.environment
+    }
   }
 }
