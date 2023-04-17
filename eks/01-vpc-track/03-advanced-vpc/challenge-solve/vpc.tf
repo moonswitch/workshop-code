@@ -25,13 +25,4 @@ module "vpc" {
   vpc_flow_log_tags = {
     Name = "vpc-${local.env_name}"
   }
-
-  vpc_tags = {
-    Name = "${local.env_name}"
-  }
-
-  tags = {
-    Terraform   = "true"
-    Environment = var.environment
-  }
 }
