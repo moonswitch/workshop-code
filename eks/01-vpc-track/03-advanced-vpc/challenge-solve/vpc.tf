@@ -14,7 +14,7 @@ module "vpc" {
   # Nat gateways
   enable_nat_gateway     = true
   single_nat_gateway     = false
-  one_nat_gateway_per_az = false
+  one_nat_gateway_per_az = true
 
 
   enable_flow_log                      = true
