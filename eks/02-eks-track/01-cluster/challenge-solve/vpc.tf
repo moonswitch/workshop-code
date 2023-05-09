@@ -25,4 +25,8 @@ module "vpc" {
   vpc_flow_log_tags = {
     Name = "vpc-${local.env_name}"
   }
+
+  public_subnet_tags = {
+    "kubernetes.io/role/elb" = 1
+  }
 }
