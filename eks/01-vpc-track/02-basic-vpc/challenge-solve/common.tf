@@ -1,5 +1,5 @@
 locals {
-  env_name = format("%s-%s-%s", lower(var.environment), lower(var.region), lower(data.random_pet.this.id))
+  env_name = format("%s-%s-%s", lower(var.environment), lower(var.region), lower(random_pet.this.id))
 }
 
 data "aws_availability_zones" "azs" {}
