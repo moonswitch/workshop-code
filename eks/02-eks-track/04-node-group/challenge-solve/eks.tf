@@ -38,7 +38,7 @@ module "eks" {
       name = "default-ng"
 
       ami_type       = "AL2_x86_64"
-      instance_types = ["t3a.large", "t3.large", "t2.large"]
+      instance_types = ["t3.large"]
 
       subnet_ids = module.vpc.private_subnets
 
